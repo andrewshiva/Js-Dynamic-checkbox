@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title></title>
+    <script language="javascript">
+        function Createcheckbox() {
+            var myDiv = document.getElementById("shiva");
+            var checkbox = document.createElement('input');
+            checkbox.type = "checkbox";
+            checkbox.id = "chkboxid";
+            checkbox.name = "heal";
+            myDiv.appendChild(checkbox);
+        }
+
+        function getValues() {
+            var boxes = document.getElementsByName('heal');
+
+            for (var i = 0; i < boxes.length; i++) {
+                if (boxes[i].type == 'checkbox')
+                    boxes[i].checked = true;
+
+            }
+
+        }
+
+        function getuncheck() {
+            var boxes = document.getElementsByName('heal');
+
+            for (var i = 0; i < boxes.length; i++) {
+                if (boxes[i].type == 'checkbox')
+                    boxes[i].checked = false;
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="shiva">
+
+    </div>
+    <input type="button" id="btncreate" value="Add More" onclick="Createcheckbox()" />
+    <input type="button" id="btngetvalues" value="select all values" onclick="getValues();" />
+    <input type="button" id="btngetvalues" value="Deselect all values" onclick="getuncheck();" />
+
+
+
+</body>
+
+</html>
